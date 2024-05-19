@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming</title>
+    <link rel="icon" href="gaming-logo.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            background-image: url(main.jpg);
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+        }
+        .navbar{
+            width: 100%;
+            height: 10%;
+            display: flex;
+        }
+        .logo{
+            background-image: url(gaming-logo.png);
+            background-position: center;
+            background-size: cover;
+            margin: 10px 20px;
+            width: 100px;
+            height: 80px;
+        }
+        ul{
+            display: flex;
+            margin: 25px 0 25px 250px;
+        }
+        ul li{
+            list-style: none;
+            margin-left: 30px;
+            font-size: 18px;
+        }
+        ul li a{
+            text-decoration: none;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+            font-weight: 900;
+        }
+        .sign{
+            margin: 15px 0 0 350px;
+            border-radius: 50px;
+            height: 40px;
+            width: 110px;
+            border: none;
+            cursor: pointer;
+            background-color: orange;
+        }
+        .sign a{
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 900;
+            font-size: 18px;
+        }
+        .content{
+            padding-top: 180px;
+        }
+        .content h1{
+            color: white;
+            margin: 20px 0 0 80px;
+            font-size: 40px;
+        }
+        .content h4{
+            color: white;
+            margin: 20px 0 0 80px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+        .rating{
+            display: flex;
+            margin: 20px 0 0 80px;
+        }
+        .rating li{
+            list-style: none;
+            margin-left: 10px;
+        }
+        .rating div{
+            margin-left: 20px;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 800;
+        }
+        .genre{
+            color: white;
+            margin: 20px 0 0 80px;
+            font-size: 20px;
+            font-weight: 800;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .buy{
+            border-radius: 10px;
+            height: 40px;
+            width: 110px;
+            border: none;
+            cursor: pointer;
+            background-color: orange;
+            margin: 20px 0 0 80px;
+        }
+        .buy a{
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 900;
+            font-size: 18px;
+        }
+        .wish{
+            border-radius: 10px;
+            height: 40px;
+            width: 110px;
+            border: none;
+            cursor: pointer;
+            background-color: orange;
+            margin: 20px 0 0 20px;
+        }
+        .wish a{
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 900;
+            font-size: 18px;
+        }
+        .main2{
+            width: 100%;
+            height: 160vh;
+            background-color: black;
+        }
+        .main2 h2{
+            color: white;
+            padding: 50px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 800;
+            font-size: 30px;
+        }
+        .scenes{
+            width: 90%;
+            height: 35%;
+            margin-left: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-gap: 60px;
+        }
+        .scn{
+            height: 70%;
+            width: 100%;
+            cursor: pointer;
+        }
+        .scn img{
+            overflow: hidden;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        .games{
+            width: 90%;
+            height: 55vh;
+            margin-left: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-gap: 60px;
+        }
+        .gms{
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+        }
+        .gms img{
+            overflow: hidden;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        .price{
+            display: flex;
+            margin: 10px 0;
+        }
+        .price li{
+            list-style: none;
+            margin-left: 10px;
+        }
+        .price div{
+            margin-left: 130px;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 800;
+        }
+        .main3{
+            background-color: black;
+            width: 100%;
+            height: 90vh;
+        }
+        .main3 h2{
+            color: white;
+            padding: 50px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 800;
+            font-size: 30px;
+        }
+        .articles{
+            width: 90%;
+            height: 60vh;
+            margin-left: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-gap: 60px;
+        }
+        .art{
+            height: 100%;
+            width: 100%;
+            border-radius: 20px;
+            border: solid 2px gray;
+            background-color: rgb(34, 32, 32);
+            cursor: pointer;
+        }
+        .artt{
+            width: 94%;
+            height: 70%;
+            margin: 10px;
+            border: solid 2px gray;
+            border-radius: 20px;
+        }
+        .artt img{
+            border-radius: 20px;
+            overflow: hidden;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        .art span{
+            color: white;
+            font-size: 18px;
+            margin: 15px;
+            font-weight: 800;
+        }
+        .art p{
+            color: white;
+            font-size: 18px;
+            margin: 15px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .main4{
+            width: 100%;
+            height: 35vh;
+            background-color: black;
+        }
+        .foot{
+            width: 90%;
+            height: 10vh;
+            padding-top: 20px;
+            margin: 0 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-gap: 60px;
+        }
+        .ft{
+            height: 100%;
+            width: 100%;
+        }
+        .ft img{
+            width: 60%;
+            height: 100%;
+            margin-left: 60px;
+        }
+        .ft span{
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+        .ft p{
+            color: wheat;
+            margin-top: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            cursor: pointer;
+        }
+        footer{
+            margin: 80px 10px;
+            text-align: center;
+        }
+        footer a{
+            text-decoration: none;
+            color: #999;
+            font-size: 22px;
+            margin: 0 10px;
+        }
+        footer i{
+            cursor: pointer;
+        }
+        @media only screen and (max-width:700px){
+            .main{
+            width: 100vw;
+            height: 30vh;
+        }
+        .navbar{
+            width: 40px;
+            height: 10%;
+            display: flex;
+        }
+        .logo{
+            display: none;
+        }
+        ul{
+            display: flex;
+            margin: 20px 0 25px 10px;
+        }
+        ul li{
+            margin-left: 10px;
+            font-size: 10px;
+            font-weight: 500;
+        }
+        .sign{
+            display: none;
+        }
+        .content{
+            padding-top: 20px;
+        }
+        .content h1{
+            margin: 20px 0 0 20px;
+            font-size: 15px;
+            font-weight: 700;
+        }
+        .content h4{
+            margin: 5px 0 0 20px;
+            font-size: 10px;
+            padding-right: 150px;
+            font-weight: 500;
+        }
+        .rating{
+            margin: 10px 0 0 10px;
+        }
+        .rating li{
+            list-style: none;
+            margin-left: 10px;
+            font-size: 10px;
+        }
+        .rating div{
+            margin-left: 10px;
+            font-size: 10px;
+            font-weight: 500;
+        }
+        .genre{
+            margin: 10px 0 0 20px;
+            font-size: 10px;
+            font-weight: 500;
+        }
+        .buy{
+            height: 25px;
+            width: 60px;
+            margin: 10px 0 0 20px;
+        }
+        .buy a{
+            padding: 5px;
+            font-size: 10px;
+            font-weight: 500;
+        }
+        .wish{
+            height: 25px;
+            width: 60px;
+            margin: 10px 0 0 10px;
+        }
+        .wish a{
+            padding: 5px;
+            font-size: 10px;
+            font-weight: 500;
+        }
+        .wish i{
+            font-size: 10px;
+            margin-left: 5px;
+        }
+        .main2{
+            width: 100%;
+            height: 110vh;
+            background-color: black;
+        }
+        .main2 h2{
+            padding: 25px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .scenes{
+            width: 90%;
+            height: 20vh;
+            margin-left: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+            grid-gap: 10px;
+        }
+        .scn{
+            height: 20vh;
+            width: 100%;
+        }
+        .games{
+            width: 90%;
+            height: 20vh;
+            margin-left: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 2fr));
+            grid-gap: 40px;
+        }
+        .gms{
+            height: 30vh;
+            width: 100%;
+        }
+        .price{
+            margin: 5px 0;
+        }
+        .price li{
+            margin-left: 5px;
+            font-size: 10px;
+        }
+        .price div{
+            margin-left: 50px;
+            font-size: 10px;
+            font-weight: 500;
+        }
+        .main3{
+            background-color: black;
+            width: 100%;
+            height: 140vh;
+        }
+        .main3 h2{
+            padding: 30px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .articles{
+            width: 90%;
+            height: 20vh;
+            margin-left: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 3fr));
+            grid-gap: 10px;
+        }
+        .art{
+            height: 40vh;
+            width: 100%;
+        }
+        .artt{
+            width: 94%;
+            height: 70%;
+            margin: 10px;
+        }
+        .art span{
+            font-size: 10px;
+            margin: 10px;
+        }
+        .art p{
+            font-size: 10px;
+            margin: 10px;
+        }
+        .main4{
+            width: 100%;
+            height: 25vh;
+            background-color: black;
+        }
+        .foot{
+            width: 90%;
+            height: 10vh;
+            padding-top: 20px;
+            margin: 0 20px;
+            grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+            grid-gap: 20px;
+        }
+        .ft{
+            height: 100%;
+            width: 100%;
+        }
+        .ft img{
+            width: 15vw;
+            height: 5vh;
+            margin-left: 5px;
+        }
+        .ft span{
+            font-size: 10px;
+        }
+        .ft p{
+            margin-top: 5px;
+            font-size: 10px;
+        }
+        footer{
+            margin: 30px 10px;
+            text-align: center;
+        }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="logo"></div>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">EXPLORE</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">FEATURES</a></li>
+                <li><a href="#">COMMUNITY</a></li>
+                <li><a href="#"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></a></li>
+            </ul>
+            <button class="sign"><a href="#">SIGN UP</a></button>
+        </div>
+        <div class="content">
+            <h1>ASSASSINS-CREED VALHALLA</h1>
+            <h4>Become Eivor, a mighty Viking raider and lead your clan from the harsh shores of Norway<br>to a new home amid the lush farmlands of ninth-century England.</h4>
+            <span class="rating">
+                <li><i class="fa-solid fa-star" style="color: #f26e02;"></i></li>
+                <li><i class="fa-solid fa-star" style="color: #f26e02;"></i></li>
+                <li><i class="fa-solid fa-star" style="color: #f26e02;"></i></li>
+                <li><i class="fa-solid fa-star" style="color: #f26e02;"></i></li>
+                <div>PS4/XBOX/PC</div>
+            </span>
+            <div class="genre">Genre: Action-Adventure</div>
+            <button class="buy"><a href="#">BUY NOW</a></button>
+            <button class="wish"><i class="fa-regular fa-heart" style="color: #ffffff;"></i><a href="#">Wishlist</a></button>
+        </div>
+    </div>
+    <div class="main2">
+        <h2>Assassins-Creed Valhalla Scenes</h2>
+        <div class="scenes">
+            <div class="scn"><img src="scene1.jpg" alt=""></div>
+            <div class="scn"><img src="scene2.jpg" alt=""></div>
+            <div class="scn"><img src="scene3.jpg" alt=""></div>
+        </div>
+        <h2>TRENDING GAMES</h2>
+        <div class="games">
+            <div class="gms"><img src="game1.jpg" alt=""><span class="price">
+                <li><i class="fa-solid fa-star" style="color: #f26e02;"></i></li>
+                <li><i class="fa-solid fa-star" style="color: #f26e02;"></i></li>
+                <li><i class="fa-solid fa-star" style="color: #f26e02;"></i></li>
+                <li><i class="fa-solid fa-star" style="color: #f26e02;"></i></li>
+                <div>$ 34.00</div>
+            </span></div>
+            <div class="gms"><img src="game2.jpg" alt=""><span class="price">
+                <li><i class="fa-solid fa-star" style="color: #f26e02;"></i></li>
+                <li><i class="fa-solid fa-star" style="color: #f26e02;"></i></li>
+                <li><i class="fa-solid fa-star" style="color: #f26e02;"></i></li>
+                <li><i class="fa-solid fa-star" style="color: #f26e02;"></i></li>
+                <div>$ 34.00</div>
+            </span></div>
+            <div class="gms"><img src="game3.jpg" alt=""><span class="price">
+                <li><i class="fa-solid fa-star" style="color: #f26e02;"></i></li>
+                <li><i class="fa-solid fa-star" style="color: #f26e02;"></i></li>
+                <li><i class="fa-solid fa-star" style="color: #f26e02;"></i></li>
+                <li><i class="fa-solid fa-star" style="color: #f26e02;"></i></li>
+                <div>$ 34.00</div>
+            </span></div>
+            <div class="gms"><img src="game4.jpg" alt=""><span class="price">
+                <li><i class="fa-solid fa-star" style="color: #f26e02;"></i></li>
+                <li><i class="fa-solid fa-star" style="color: #f26e02;"></i></li>
+                <li><i class="fa-solid fa-star" style="color: #f26e02;"></i></li>
+                <li><i class="fa-solid fa-star" style="color: #f26e02;"></i></li>
+                <div>$ 34.00</div>
+            </span></div>
+        </div>
+    </div>
+    <div class="main3">
+        <h2>RECOMMENDED ARTICLES</h2>
+        <div class="articles">
+            <div class="art"><div class="artt"><img src="article1.jpg" alt=""></div><span>LEAD EPIC RAIDS</span><p>Lead your people in massive assaults against Saxon armies and fortresses, and expand your influence far beyond your settlement’s borders.</p></div>
+            <div class="art"><div class="artt"><img src="article2.jpg" alt=""></div><span>WRITE YOUR VIKING SAGA</span><p>The advanced RPG mechanics of Assassin's Creed Valhalla give you new ways to grow as a warrior and a leader.</p></div>
+            <div class="art"><div class="artt"><img src="article3.jpg" alt=""></div><span>GROW YOUR SETTLEMENT</span><p>Grow and customize your own settlement by recruiting new clan members and building upgradable structures.</p></div>
+        </div>
+    </div>
+    <div class="main4">
+        <div class="foot">
+        <div class="ft"><img src="gaming-logo.png" alt=""></div>
+        <div class="ft"><span>My Account</span><p>Sign up</p><p>wishlist</p></div>
+        <div class="ft"><span>About Us</span><p>Support</p><p>Policy</p><p>Terms & Conditions</p></div>
+        <div class="ft"><span>Contacts</span><p>game@gmail.com</p><p>Call us: +97 66 777 888</p></div>
+        </div>
+        <footer>
+            <a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </footer>
+    </div>
+</body>
+</html>
